@@ -1,0 +1,11 @@
+Model Information:
+* title:	Low poly motorcycle
+* source:	https://sketchfab.com/3d-models/low-poly-motorcycle-4fc3500e04b14e73b942d85bc948c5e9
+* author:	matisosanimation (https://sketchfab.com/matisosanimation)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Low poly motorcycle" (https://sketchfab.com/3d-models/low-poly-motorcycle-4fc3500e04b14e73b942d85bc948c5e9) by matisosanimation (https://sketchfab.com/matisosanimation) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
