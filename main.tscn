@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bc5tqs0sfsdt6"]
+[gd_scene load_steps=10 format=3 uid="uid://bc5tqs0sfsdt6"]
 
 [ext_resource type="Texture2D" uid="uid://dreknc4ldkl3d" path="res://prototype_texture.png" id="1_1bvp3"]
 [ext_resource type="Script" path="res://addons/gevp/scripts/vehicle_controllergd.gd" id="1_h2yge"]
+[ext_resource type="Script" path="res://addons/gevp/scripts/gui.gd" id="1_lquwl"]
 [ext_resource type="PackedScene" uid="uid://cqfp6bqy07b73" path="res://motorcycle.tscn" id="2_1bvp3"]
 [ext_resource type="Script" path="res://addons/gevp/scripts/camera.gd" id="3_lquwl"]
 
@@ -33,6 +34,33 @@ shadow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_lquwl")
 
+[node name="GUI" type="Control" parent="." node_paths=PackedStringArray("vehicle")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lquwl")
+vehicle = NodePath("../VechicleController/motorcycle")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Speed" type="Label" parent="GUI/VBoxContainer"]
+layout_mode = 2
+
+[node name="RPM" type="Label" parent="GUI/VBoxContainer"]
+layout_mode = 2
+
+[node name="Gear" type="Label" parent="GUI/VBoxContainer"]
+layout_mode = 2
+
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
 use_collision = true
 metadata/_edit_lock_ = true
@@ -46,7 +74,7 @@ script = ExtResource("1_h2yge")
 vehicle_node = NodePath("motorcycle")
 
 [node name="motorcycle" parent="VechicleController" instance=ExtResource("2_1bvp3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.241083, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.136788, 0)
 
 [node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("follow_this")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.94594, 2.94581)
